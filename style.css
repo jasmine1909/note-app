@@ -1,0 +1,93 @@
+:root {
+  --green: rgb(122, 247, 118);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right top, #baeeb0, #6be67b);
+
+  line-height: 1.5;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.note {
+  width: 80%;
+  margin-top: 3rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  padding: 2rem;
+  border-radius: 50px;
+}
+.note h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.note-input h3 {
+  color: var(--green);
+}
+
+.note-list {
+  background-color: rgb(87, 189, 109);
+  padding: 0.5rem;
+}
+
+#note-title,
+#note-content {
+  width: 100%;
+  border: 1px solid var(--green);
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+#note-title:focus,
+#note-content:focus {
+  outline: 0;
+}
+.btn {
+  background: var(--green);
+  border: 2px solid var(--green);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+  color: var(--green);
+  background-color: white;
+}
+
+.note-item {
+  background-color: white;
+  color: grey;
+  padding: 2rem;
+
+  margin: 2rem;
+}
+.warning {
+  border-color: red !important;
+}
+@media screen and (min-width: 992px) {
+  .note-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+}
